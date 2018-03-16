@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    tools:context="com.example.arunn.silfraagri.loginactivity">
+
+
+    <ImageView
+        android:id="@+id/login_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/logo" />
+
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/login_icon"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/inputs"
+        android:drawableLeft="@drawable/email"
+        android:ems="10"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:padding="5dp" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/login_email"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/inputs"
+        android:drawableLeft="@drawable/password"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="5dp" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/login_password"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/button"
+        android:padding="5dp"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/register_account_link"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/login_button"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="21dp"
+        android:text="Don't have an Account ? Create one "
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textView3">
+
+        <ImageView
+            android:id="@+id/facebook_sign_in_button"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/facebook" />
+
+        <ImageView
+            android:id="@+id/twitter_sign_in_button"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/twitter" />
+
+        <ImageView
+            android:id="@+id/google_sign_in_button"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/google" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_account_link"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="OR"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
