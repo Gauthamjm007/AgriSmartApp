@@ -12,10 +12,19 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -26,7 +35,11 @@ public class MainActivity extends AppCompatActivity {
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private RecyclerView postList;
     private Toolbar mToolbar;
+    private CircleImageView NavProfileImage;
+    private TextView NavProfileUserName;
     private FirebaseAuth mAuth;
+    private DatabaseReference UserRef;
+    String currentUserId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         mAuth=(FirebaseAuth.getInstance());
+        currentUserId=mAuth.getCurrentUser().getUid();
+        UserRef= FirebaseDatabase.getInstance().getReference().child("Users");
+
         mToolbar=(Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setTitle("Home");
@@ -48,6 +64,36 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         navigationView=(NavigationView) findViewById(R.id.navigation_view);
         View navView = navigationView.inflateHeaderView(R.layout.navigation_header);
+        NavProfileImage=(CircleImageView)navView.findViewById(R.id.nav_profile_image);
+        NavProfileUserName=(TextView)navView.findViewById(R.id.nav_user_full_name);
+
+        UserRef.child(currentUserId).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    if (dataSnapshot.hasChild("fullname")){
+                        String fullname= dataSnapshot.child("fullname").getValue().toString();
+                        NavProfileUserName.setText(fullname);
+
+                    }
+
+                    if(dataSnapshot.hasChild("profile mage")){
+                        String image =dataSnapshot.child("profile Image").getValue().toString();
+                        Picasso.with(MainActivity.this).load(image).placeholder(R.drawable.profile).into(NavProfileImage);
+                    }
+
+                    else{
+                        Toast.makeText(MainActivity.this, "Profile name Do not Exist.....", Toast.LENGTH_SHORT).show();
+                    }
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -69,9 +115,39 @@ public class MainActivity extends AppCompatActivity {
         if(currentUser == null){
             SendUserTologinActivity();
         }
+        else{
+            CheckUserExitence();
+        }
+    }
+
+    private void CheckUserExitence() {
+        final String current_user_ID=mAuth.getCurrentUser().getUid();
+        UserRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(!dataSnapshot.hasChild(current_user_ID)){
+
+                    SendUserToSetupActivity();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
+
+    private void SendUserToSetupActivity() {
+
+             Intent SetupIntent = new Intent(MainActivity.this, SetupActivity.class);
+        SetupIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(SetupIntent);
+        finish();
     }
 
     private void SendUserTologinActivity() {
+
         Intent loginIntent = new Intent(MainActivity.this, loginactivity.class);
         loginIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(loginIntent);
@@ -100,7 +176,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.nav_logout:
-                Toast.makeText(this,"Logout",Toast.LENGTH_SHORT).show();
+                mAuth.signOut();
+                SendUserTologinActivity();
+                Toast.makeText(this,"Loggedout",Toast.LENGTH_SHORT).show();
                 break;
 
 
