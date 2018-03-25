@@ -2,4 +2,17 @@
     <string name="app_name">SilfraAgri</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
+    <string name="notifications">notifications</string>
+    <string name="info">info</string>
+    <string name="weather">weather</string>
+    <string name="suggestion">suggestion</string>
+    <string name="soil">soil</string>
+    <string name="recent">recent</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_fragment">info_fragment</string>
+    <string name="notification_fragment">notification_fragment</string>
+    <string name="soil_fragment">soil_fragment</string>
+    <string name="weather_fragment">weather_fragment</string>
 </resources>

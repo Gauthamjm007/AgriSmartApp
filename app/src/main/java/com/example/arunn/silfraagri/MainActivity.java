@@ -1,8 +1,10 @@
 package com.example.arunn.silfraagri;
 
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.RecoverySystem;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -27,19 +29,20 @@ import com.squareup.picasso.Picasso;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
 
     private NavigationView navigationView;
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
-    private RecyclerView postList;
     private Toolbar mToolbar;
     private CircleImageView NavProfileImage;
     private TextView NavProfileUserName;
     private FirebaseAuth mAuth;
     private DatabaseReference UserRef;
     String currentUserId;
+    BottomNavigationView bottomNavigationView;
+    TextView textview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Home");
 
 
+        bottomNavigationView=(BottomNavigationView)findViewById(R.id.bottomNavigation);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
         drawerLayout=(DrawerLayout)findViewById(R.id.drawable_layout);
         actionBarDrawerToggle= new ActionBarDrawerToggle(MainActivity.this,drawerLayout,R.string.drawer_open,R.string.drawer_close);
@@ -66,6 +72,12 @@ public class MainActivity extends AppCompatActivity {
         View navView = navigationView.inflateHeaderView(R.layout.navigation_header);
         NavProfileImage=(CircleImageView)navView.findViewById(R.id.nav_profile_image);
         NavProfileUserName=(TextView)navView.findViewById(R.id.nav_user_full_name);
+
+        setTitle("Notification Fragment"); //this will set title of Action Bar
+        NotificationFragment notificationfragment = new NotificationFragment();
+        android.support.v4.app.FragmentTransaction notificationfragmentTransaction = getSupportFragmentManager().beginTransaction();
+        notificationfragmentTransaction.replace(R.id.frag, notificationfragment, "Notification Fragment");
+        notificationfragmentTransaction.commit();
 
         UserRef.child(currentUserId).addValueEventListener(new ValueEventListener() {
             @Override
@@ -106,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
 
 
     @Override
@@ -183,5 +196,48 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case R.id.notifications_id:
+                setTitle("Notification Fragment"); //this will set title of Action Bar
+                NotificationFragment notificationfragment = new NotificationFragment();
+                android.support.v4.app.FragmentTransaction notificationfragmentTransaction = getSupportFragmentManager().beginTransaction();
+                notificationfragmentTransaction.replace(R.id.frag, notificationfragment, "Notification Fragment");
+                notificationfragmentTransaction.commit();
+                return true;
+            case R.id.info_id:
+                setTitle("Info Fragment"); //this will set title of Action Bar
+                InfoFragment infofragment = new InfoFragment();
+                android.support.v4.app.FragmentTransaction infofragmentTransaction = getSupportFragmentManager().beginTransaction();
+                infofragmentTransaction.replace(R.id.frag, infofragment, "Notification Fragment");
+                infofragmentTransaction.commit();
+                return true;
+            case R.id.weather_id:
+                setTitle("weather Fragment"); //this will set title of Action Bar
+                WeatherFragment weatherfragment = new WeatherFragment();
+                android.support.v4.app.FragmentTransaction weatherfragmentTransaction = getSupportFragmentManager().beginTransaction();
+                weatherfragmentTransaction.replace(R.id.frag, weatherfragment, "Notification Fragment");
+                weatherfragmentTransaction.commit();
+                return true;
+            case R.id.soil_info_id:
+                setTitle("Soil Info Fragment"); //this will set title of Action Bar
+                SoilFragment soilfragment = new SoilFragment();
+                android.support.v4.app.FragmentTransaction soilfragmentTransaction = getSupportFragmentManager().beginTransaction();
+                soilfragmentTransaction.replace(R.id.frag, soilfragment, "Soil Fragment");
+                soilfragmentTransaction.commit();
+                return true;
+            case R.id.suggestion_id:
+                setTitle("SuggestionFragment"); //this will set title of Action Bar
+                SuggestionFragment suggestionfragment = new SuggestionFragment();
+                android.support.v4.app.FragmentTransaction suggestionfragmentTransaction = getSupportFragmentManager().beginTransaction();
+                suggestionfragmentTransaction.replace(R.id.frag, suggestionfragment, "Soil Fragment");
+                suggestionfragmentTransaction.commit();
+                return true;
+        }
+        return true;
     }
 }
