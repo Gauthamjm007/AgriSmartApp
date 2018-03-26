@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+     <item
+         android:id="@+id/notifications_id"
+         android:icon="@drawable/notifications"
+         android:title="@string/notifications"
+         android:orderInCategory="1"/>
+    <item
+        android:id="@+id/info_id"
+        android:icon="@drawable/info"
+        android:title="@string/info"
+        android:orderInCategory="2"/>
+    <item
+        android:id="@+id/weather_id"
+        android:icon="@drawable/weather"
+        android:title="@string/weather"
+        android:orderInCategory="3"/>
+    <item
+        android:id="@+id/soil_info_id"
+        android:icon="@drawable/soil"
+        android:title="@string/soil"
+        android:orderInCategory="4"/>
+    <item
+        android:id="@+id/suggestion_id"
+        android:icon="@drawable/suggestions"
+        android:title="@string/suggestion"
+        android:orderInCategory="5"/>
+
+</menu>
