@@ -1,8 +1,6 @@
 package com.example.arunn.silfraagri;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
-import android.os.RecoverySystem;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -10,7 +8,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +23,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import bottom_navigation_package.InfoFragment;
+import bottom_navigation_package.NotificationFragment;
+import bottom_navigation_package.SoilFragment;
+import bottom_navigation_package.SuggestionFragment;
+import bottom_navigation_package.WeatherFragment;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
@@ -43,11 +45,15 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     String currentUserId;
     BottomNavigationView bottomNavigationView;
     TextView textview;
-
+    String d,e;
+    FirebaseDatabase firebaseDatabase;
+    public DatabaseReference mRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        mRef = firebaseDatabase.getReference();
 
 
         mAuth=(FirebaseAuth.getInstance());
@@ -79,6 +85,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         notificationfragmentTransaction.replace(R.id.frag, notificationfragment, "Notification Fragment");
         notificationfragmentTransaction.commit();
 
+
+
+
+
         UserRef.child(currentUserId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -89,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
                     }
 
-                    if(dataSnapshot.hasChild("profile mage")){
+                    if(dataSnapshot.hasChild("profile Image")){
                         String image =dataSnapshot.child("profile Image").getValue().toString();
                         Picasso.with(MainActivity.this).load(image).placeholder(R.drawable.profile).into(NavProfileImage);
                     }
@@ -99,6 +109,21 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                     }
 
                 }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+        mRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                d = dataSnapshot.child("sensors").child("gps").child("lattitude").getValue().toString();
+                e = dataSnapshot.child("sensors").child("gps").child("longitude").getValue().toString();
+
             }
 
             @Override
@@ -213,14 +238,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 setTitle("Info Fragment"); //this will set title of Action Bar
                 InfoFragment infofragment = new InfoFragment();
                 android.support.v4.app.FragmentTransaction infofragmentTransaction = getSupportFragmentManager().beginTransaction();
-                infofragmentTransaction.replace(R.id.frag, infofragment, "Notification Fragment");
+                infofragmentTransaction.replace(R.id.frag, infofragment, "Info Fragment");
                 infofragmentTransaction.commit();
                 return true;
             case R.id.weather_id:
                 setTitle("weather Fragment"); //this will set title of Action Bar
                 WeatherFragment weatherfragment = new WeatherFragment();
                 android.support.v4.app.FragmentTransaction weatherfragmentTransaction = getSupportFragmentManager().beginTransaction();
-                weatherfragmentTransaction.replace(R.id.frag, weatherfragment, "Notification Fragment");
+                weatherfragmentTransaction.replace(R.id.frag, weatherfragment, "Weather Fragment");
                 weatherfragmentTransaction.commit();
                 return true;
             case R.id.soil_info_id:
@@ -234,7 +259,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 setTitle("SuggestionFragment"); //this will set title of Action Bar
                 SuggestionFragment suggestionfragment = new SuggestionFragment();
                 android.support.v4.app.FragmentTransaction suggestionfragmentTransaction = getSupportFragmentManager().beginTransaction();
-                suggestionfragmentTransaction.replace(R.id.frag, suggestionfragment, "Soil Fragment");
+                suggestionfragmentTransaction.replace(R.id.frag, suggestionfragment, "Suggestion Fragment");
                 suggestionfragmentTransaction.commit();
                 return true;
         }

@@ -8,11 +8,31 @@
     <string name="suggestion">suggestion</string>
     <string name="soil">soil</string>
     <string name="recent">recent</string>
+    <string name="map_type_none">None</string>
+    <string name="map_type_normal">Normal</string>
+    <string name="map_type_terrain">Terrain</string>
+    <string name="map_type_satellite">Satellite</string>
+    <string name="map_type_hybrid">Hybrid</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="battery_fragment">Battery fragment</string>
     <string name="info_fragment">info_fragment</string>
     <string name="notification_fragment">notification_fragment</string>
     <string name="soil_fragment">soil_fragment</string>
     <string name="weather_fragment">weather_fragment</string>
+    <string name="map_fragment">Map will be displayed</string>
+    <string name="device_temp_fragment">Device Temprature will be displayed</string>
+    <string name="weather_condition_fragment">Weather Conditions will be displayed</string>
+    <string name="rain_probability_fragment">Rain Probabiltiy will be displayed</string>
+    <string name="Illumination_fragment">Illumination value will be displayed</string>
+    <string name="soil_humidity_fragment">Soil Humidity value will be displayed</string>
+    <string name="Soil_ph_fragment">Soil pH value will be displayed</string>
+    <string name="Soil_npk_fragment">Soil NPK value will be displayed</string>
+    <string name="Soil_fertilizers_fragment">Soil fertilizers will be displayed</string>
+    <string name="Soil_pesticides_fragment">Soil pesticides will be displayed</string>
+    <string name="Soil_crop_suggestions_fragment">Soil crop suggestions will be displayed</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

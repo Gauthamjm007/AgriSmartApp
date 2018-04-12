@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AgriSmartApp.iml" filepath="$PROJECT_DIR$/AgriSmartApp.iml" />
-      <module fileurl="file://C:\Users\Lenovo\AndroidStudioProjects\AgriSmartApp\SilfraAgri.iml" filepath="C:\Users\Lenovo\AndroidStudioProjects\AgriSmartApp\SilfraAgri.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
