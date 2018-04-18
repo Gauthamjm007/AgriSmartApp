@@ -31,6 +31,9 @@
     <string name="Soil_fertilizers_fragment">Soil fertilizers will be displayed</string>
     <string name="Soil_pesticides_fragment">Soil pesticides will be displayed</string>
     <string name="Soil_crop_suggestions_fragment">Soil crop suggestions will be displayed</string>
+    <string name="n_clear_all">Clear All</string>
+    <string name="com.twitter.sdk.android.CONSUMER_KEY">cww2L1i0rfT6xhLOxWZiuAXo3</string>
+    <string name="com.twitter.sdk.android.CONSUMER_SECRET">Ya9kXIqycl39QkyvsMm8fMa3TYbxncCcVFMHdeEsZREmIKPdlx</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
