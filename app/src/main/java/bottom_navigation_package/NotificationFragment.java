@@ -39,7 +39,7 @@ public class NotificationFragment extends Fragment  {
             @Override
             public void onClick(View view) {
 
-                Intent i = new Intent(getActivity(),MapsActivity.class);
+                Intent i = new Intent(getActivity(),notification.class);
                 startActivity(i);
                 ((Activity)getActivity()).overridePendingTransition(0,0);
 

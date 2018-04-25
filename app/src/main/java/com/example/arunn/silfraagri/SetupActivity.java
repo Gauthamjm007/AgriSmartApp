@@ -28,6 +28,7 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 
 import java.util.HashMap;
 
+import Instructions_Activity.InstructionsActivity;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SetupActivity extends AppCompatActivity {
@@ -197,7 +198,7 @@ public class SetupActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task task) {
                            if(task.isSuccessful()){
-                               SendUserToMainActivity();
+                               SendUserToInstructionActivity();
                                Toast.makeText(SetupActivity.this, "Your Account Created Succesfully", Toast.LENGTH_LONG).show();
                                loadingBar.dismiss();
 
@@ -218,9 +219,9 @@ public class SetupActivity extends AppCompatActivity {
 
     }
 
-    private void SendUserToMainActivity() {
+    private void SendUserToInstructionActivity() {
 
-        Intent mainIntent = new Intent(SetupActivity.this,MainActivity.class);
+        Intent mainIntent = new Intent(SetupActivity.this, InstructionsActivity.class);
         mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(mainIntent);
         finish();

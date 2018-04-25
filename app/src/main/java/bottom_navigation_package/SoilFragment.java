@@ -1,6 +1,8 @@
 package bottom_navigation_package;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,7 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import com.example.arunn.silfraagri.NPK_PieChart;
 import com.example.arunn.silfraagri.R;
+
+import SuggestionActivity.Suggestions;
 import soil_package.SoilHumidityFragment;
 import soil_package.npkFragment;
 import soil_package.phFragment;
@@ -59,10 +64,9 @@ public class SoilFragment extends Fragment {
         npkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                npkFragment npkfragment = new npkFragment();
-                android.support.v4.app.FragmentTransaction npkfragmentTransaction = getFragmentManager().beginTransaction();
-                npkfragmentTransaction.replace(R.id.frag, npkfragment, "NPK Fragment");
-                npkfragmentTransaction.commit();
+                Intent i = new Intent(getActivity(), NPK_PieChart.class);
+                startActivity(i);
+                ((Activity)getActivity()).overridePendingTransition(0,0);
             }
         });
         return view;

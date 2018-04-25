@@ -29,6 +29,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:11.8.0'
     implementation 'com.google.firebase:firebase-messaging:11.8.0'
     implementation 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation 'com.google.android.gms:play-services-maps:11.8.0'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.5.+'

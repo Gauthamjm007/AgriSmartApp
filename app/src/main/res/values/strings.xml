@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SilfraAgri</string>
+    <string name="app_name">AgriSmart</string>
     <string name="drawer_open">Drawer Open</string>
     <string name="drawer_close">Drawer Close</string>
     <string name="notifications">notifications</string>
@@ -14,7 +14,7 @@
     <string name="map_type_satellite">Satellite</string>
     <string name="map_type_hybrid">Hybrid</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
+
     <string name="battery_fragment">Battery fragment</string>
     <string name="info_fragment">info_fragment</string>
     <string name="notification_fragment">notification_fragment</string>
@@ -34,8 +34,52 @@
     <string name="n_clear_all">Clear All</string>
     <string name="com.twitter.sdk.android.CONSUMER_KEY">cww2L1i0rfT6xhLOxWZiuAXo3</string>
     <string name="com.twitter.sdk.android.CONSUMER_SECRET">Ya9kXIqycl39QkyvsMm8fMa3TYbxncCcVFMHdeEsZREmIKPdlx</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+
+    <string name="automatic_data">Device Information</string>
+    <string name="permission_title">Notification</string>
+    <string name="permission_detail">Will provide you notifications of battery , important soil information and weather informations</string>
+    <string name="choose_the_song">Weather Report</string>
+    <string name="edit_data">Soil details</string>
+    <string name="result_awesome">Crop suggestion</string>
+    <string name="continue_and_learn">.</string>
+    <string name="continue_and_update">.</string>
+    <string name="continue_and_result">.</string>
+    <string name="thank_you">Thank you</string>
+    <string name="gm_finds_photos">The Device information includes the location of the device , Battery details of the product and also its current conditions</string>
+    <string name="swap_to_the_tab">The weather details will be uploaded here , Rain Probability , The Illuminations and other details can be seen here</string>
+    <string name="update_easily">The Soil NPK,Soil Humidity and Soil Temprature Data can be viewed</string>
+    <string name="after_updating">The Suggestions will be given based on the data collected regarding the Crops to grow , Fertilizers and Pesticides that can be used </string>
+
+
+    <string name="lpaddy">&lt;a href="https://en.wikipedia.org/wiki/Paddy_field">To know more>>&lt;/a></string>
+    <string name="lragi">&lt;a href="https://en.wikipedia.org/wiki/Eleusine_coracana">To know more>>&lt;/a></string>
+    <string name="lareca">&lt;a href="https://en.wikipedia.org/wiki/Areca">To know more>>&lt;/a></string>
+    <string name="lmaize">&lt;a href="https://en.wikipedia.org/wiki/Maize">To know more>>&lt;/a></string>
+    <string name="lsorghum">&lt;a href="https://en.wikipedia.org/wiki/Sorghum">To know more>>&lt;/a></string>
+    <string name="lsugarcane">&lt;a href="https://en.wikipedia.org/wiki/Sugarcane">To know more>>&lt;/a></string>
+    <string name="lsunflower">&lt;a href="https://en.wikipedia.org/wiki/Sunflower">To know more>>&lt;/a></string>
+    <string name="lcotton">&lt;a href="https://en.wikipedia.org/wiki/Cotton">To know more>>&lt;/a></string>
+    <string name="lcoconut">&lt;a href="https://en.wikipedia.org/wiki/Coconut">To know more>>&lt;/a></string>
+    <string name="lcoffee">&lt;a href="https://en.wikipedia.org/wiki/Coffee">To know more>>&lt;/a></string>
+    <string name="ltea">&lt;a href="https://en.wikipedia.org/wiki/Tea">To know more>>&lt;/a></string>
+    <string name="lbanana">&lt;a href="https://en.wikipedia.org/wiki/Banana">To know more>>&lt;/a></string>
+    <string name="lginger">&lt;a href="https://en.wikipedia.org/wiki/Ginger">To know more>>&lt;/a></string>
+    <string name="lturmeric">&lt;a href="https://en.wikipedia.org/wiki/Turmeric">To know more>>&lt;/a></string>
+    <string name="lgroundnut">&lt;a href="https://en.wikipedia.org/wiki/Groundnut">To know more>>&lt;/a></string>
+    <string name="lrubber">&lt;a href="https://en.wikipedia.org/wiki/Rubber">To know more>>&lt;/a></string>
+    <string name="lpotato">&lt;a href="https://en.wikipedia.org/wiki/Potato">To know more>>&lt;/a></string>
+    <string name="lcashewnut">&lt;a href="https://en.wikipedia.org/wiki/Cashewnut">To know more>>&lt;/a></string>
+    <string name="lbrinjal">&lt;a href="https://en.wikipedia.org/wiki/Brinjal">To know more>>&lt;/a></string>
+    <string name="lonion">&lt;a href="https://en.wikipedia.org/wiki/Onion">To know more>>&lt;/a></string>
+    <string name="lchilli">&lt;a href="https://en.wikipedia.org/wiki/Chilli">To know more>>&lt;/a></string>
+    <string name="tomato">&lt;a href="https://en.wikipedia.org/wiki/Tomato">To know more>>&lt;/a></string>
+    <string name="lcauliflower">&lt;a href="https://en.wikipedia.org/wiki/Cauliflower">To know more>>&lt;/a></string>
+    <string name="lcapsicum">&lt;a href="https://en.wikipedia.org/wiki/Capsicum">To know more>>&lt;/a></string>
+    <string name="lcabbage">&lt;a href="https://en.wikipedia.org/wiki/Cabbage">To know more>>&lt;/a></string>
+    <string name="lwatermelon">&lt;a href="https://en.wikipedia.org/wiki/Watermelon">To know more>>&lt;/a></string>
+
+
+
 </resources>

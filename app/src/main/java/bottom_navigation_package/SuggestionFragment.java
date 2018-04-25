@@ -1,6 +1,8 @@
 package bottom_navigation_package;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,9 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import suggestions_package.Crops_grown_Fragment;
 import suggestions_package.Fertilizers_suggestion_Fragment;
 import com.example.arunn.silfraagri.R;
+import SuggestionActivity.Suggestions;
+
 import suggestions_package.pesticides_Fragment;
 
 
@@ -62,10 +65,9 @@ public class SuggestionFragment extends Fragment {
         CropSuggestionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Crops_grown_Fragment cropsgrownfragment = new Crops_grown_Fragment();
-                android.support.v4.app.FragmentTransaction cropsgrownfragmentTransaction = getFragmentManager().beginTransaction();
-                cropsgrownfragmentTransaction.replace(R.id.frag,cropsgrownfragment , "Device Temprature Fragment");
-                cropsgrownfragmentTransaction.commit();
+                Intent i = new Intent(getActivity(), Suggestions.class);
+                startActivity(i);
+                ((Activity)getActivity()).overridePendingTransition(0,0);
             }
         });
 

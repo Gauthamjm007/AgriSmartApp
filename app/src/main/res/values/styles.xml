@@ -23,5 +23,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="TutorialStyle" parent="Theme.AppCompat.Light.NoActionBar">
+
+    </style>
+
 
 </resources>
