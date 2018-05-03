@@ -59,7 +59,7 @@ public class Suggestions extends AppCompatActivity {
             CropList.add(new Suggestions_Data(R.drawable.coconut, "Coconut", "Nut", 9));
         }
         if((pH>=6.0 && pH<=7.5)&&(Humidity>=70 && Humidity<=90)){
-            CropList.add(new Suggestions_Data(R.drawable.coffee, "Coffe", "Seed", 10));
+            CropList.add(new Suggestions_Data(R.drawable.coffee, "Coffee", "Seed", 10));
         }
          if((pH>=5.5 && pH<=7.0)&&(Humidity>=80 && Humidity<=90)){
             CropList.add(new Suggestions_Data(R.drawable.tea, "Tea", "Leaf", 11));

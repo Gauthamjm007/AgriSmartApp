@@ -18,31 +18,22 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".loginactivity">
-        </activity>
+        <activity android:name=".loginactivity"></activity>
         <activity android:name=".SetupActivity" />
-        <activity android:name=".notification">
-        </activity>
+        <activity android:name=".notification"></activity>
         <activity
-            android:theme="@style/SplashTheme"
             android:name=".SplashScreenActivity"
-            >
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="Instructions_Activity.InstructionsActivity">
-        </activity>
-
-
-
+        <activity android:name="Instructions_Activity.InstructionsActivity"></activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Base.Theme.AppCompat" />
-
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -51,22 +42,23 @@
         <activity
             android:name="info_bar_package.MapsActivity"
             android:label="@string/title_activity_maps"
-            android:theme="@style/AppThemeMap"></activity>
-
+            android:theme="@style/AppThemeMap" />
         <activity
             android:name="SuggestionActivity.Suggestions"
             android:label="Crop Suggestions"
-            android:theme="@style/AppThemeMap"/>
-
-        <activity android:name="SuggestionActivity.CropDetails"
-            android:theme="@style/AppThemeMap"></activity>
-
-        <activity android:name=".NPK_PieChart"
+            android:theme="@style/AppThemeMap" />
+        <activity
+            android:name="SuggestionActivity.CropDetails"
+            android:theme="@style/AppThemeMap" />
+        <activity
+            android:name=".NPK_PieChart"
             android:label="NPK"
-            android:theme="@style/AppThemeMap">
-        </activity>
-
-
+            android:theme="@style/AppThemeMap"></activity>
+        <activity
+            android:name=".soil_water_level"
+            android:label="Soil Moisture"
+            android:theme="@style/AppThemeMap"></activity>
+        <activity android:name=".aboutus_activity"></activity>
     </application>
 
 </manifest>

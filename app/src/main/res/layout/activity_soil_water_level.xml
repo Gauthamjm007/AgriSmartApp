@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".soil_water_level">
+
+
+    <me.itangqi.waveloadingview.WaveLoadingView
+        android:id="@+id/waveLoadingView"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_centerInParent="true"
+        app:wlv_borderColor="@color/colorbrown"
+        app:wlv_borderWidth="10dp"
+        app:wlv_progressValue="40"
+        app:wlv_round_rectangle="true"
+        app:wlv_shapeType="circle"
+        app:wlv_titleCenter="40%"
+        app:wlv_titleCenterColor="@color/colorblack"
+        app:wlv_titleCenterSize="24sp"
+        app:wlv_titleCenterStrokeWidth="3dp"
+        app:wlv_triangle_direction="north"
+        app:wlv_waveAmplitude="30"
+        app:wlv_titleTopSize="15dp"
+        app:wlv_titleTopColor="@color/colorblack"
+        app:wlv_waveColor="@color/colorblue"
+        android:layout_gravity="center"/>
+
+
+</RelativeLayout>

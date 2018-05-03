@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 
 import com.example.arunn.silfraagri.NPK_PieChart;
 import com.example.arunn.silfraagri.R;
+import com.example.arunn.silfraagri.soil_water_level;
 
 import SuggestionActivity.Suggestions;
 import soil_package.SoilHumidityFragment;
@@ -44,10 +45,9 @@ public class SoilFragment extends Fragment {
         SoilHumidityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SoilHumidityFragment soilhumidityfragment = new SoilHumidityFragment();
-                android.support.v4.app.FragmentTransaction soilhumidityfragmentTransaction = getFragmentManager().beginTransaction();
-                soilhumidityfragmentTransaction.replace(R.id.frag, soilhumidityfragment, "Soil humidity Fragment");
-                soilhumidityfragmentTransaction.commit();
+                Intent i = new Intent(getActivity(), soil_water_level.class);
+                startActivity(i);
+                ((Activity)getActivity()).overridePendingTransition(0,0);
 
             }
         });

@@ -7,4 +7,7 @@
     <color name="colorPrimary2">#3F51B5</color>
     <color name="colorPrimaryDark2">#FFFFFF</color>
     <color name="colorAccent2">#FF4081</color>
+    <color name="colorbrown">#733A2F</color>
+    <color name="colorblue">#3498DB</color>
+    <color name="colorblack">#000</color>
 </resources>

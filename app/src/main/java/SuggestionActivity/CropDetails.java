@@ -39,14 +39,15 @@ public class CropDetails extends AppCompatActivity {
         cropname = (TextView) findViewById(R.id.CropName);
         name = getIntent().getExtras().getString("NAME");
         mRef= FirebaseDatabase.getInstance().getReference();
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                n=dataSnapshot.child("sensors").child("npk").child("n").getValue().toString();
-                p=dataSnapshot.child("sensors").child("npk").child("p").getValue().toString();
-                k=dataSnapshot.child("sensors").child("npk").child("k").getValue().toString();
+                n=dataSnapshot.child("sensors").child("NPK").child("N").getValue().toString();
+                p=dataSnapshot.child("sensors").child("NPK").child("P").getValue().toString();
+                k=dataSnapshot.child("sensors").child("NPK").child("K").getValue().toString();
 
 
                 if (name.equals("Paddy")) {

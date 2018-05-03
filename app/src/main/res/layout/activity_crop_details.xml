@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="91dp"
+        android:layout_marginBottom="125dp"
         android:gravity="center">
 
         <TableRow
@@ -96,8 +96,8 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="150"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/RecomP"
@@ -109,8 +109,8 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="60-70"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/RecomK"
@@ -122,8 +122,8 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="40-50"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
         </TableRow>
 
         <TableRow
@@ -154,8 +154,8 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="100"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/LandP"
@@ -167,8 +167,8 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="40-51"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/LandK"
@@ -180,15 +180,15 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="40-52"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="2dp"
-            android:background="#FFF9C4">
+            android:background="#FFF9C4"
+            android:paddingTop="2dp">
 
             <TextView
                 android:id="@+id/textView21"
@@ -213,8 +213,8 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="150"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/RequireP"
@@ -226,8 +226,8 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="29"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/RequireK"
@@ -239,8 +239,8 @@
                 android:paddingRight="5dp"
                 android:paddingTop="8dp"
                 android:text="99"
-                android:textSize="18dp"
-                android:textColor="#000000"/>
+                android:textColor="#000000"
+                android:textSize="18dp" />
         </TableRow>
 
     </TableLayout>
@@ -264,7 +264,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
-        android:text="To_know_more"
+        android:text="To know More About the Crop"
         android:gravity="center"
         android:textStyle="bold"
         android:textColor="#3F51B5"
