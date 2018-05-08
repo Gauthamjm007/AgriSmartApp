@@ -10,11 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import darshanNotification.NotificationActivity;
 import com.example.arunn.silfraagri.R;
-import com.example.arunn.silfraagri.notification;
-
-import info_bar_package.MapsActivity;
-import suggestions_package.pesticides_Fragment;
 
 
 /**
@@ -35,19 +32,20 @@ public class NotificationFragment extends Fragment  {
 
         View view = inflater.inflate(R.layout.fragment_notification, container, false);
         notificatonicon=(ImageButton)view.findViewById(R.id.imagenotification);
+
         notificatonicon.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-                Intent i = new Intent(getActivity(),notification.class);
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), NotificationActivity.class);
                 startActivity(i);
                 ((Activity)getActivity()).overridePendingTransition(0,0);
-
             }
         });
-
         return view;
     }
+
+
+
 
 
 

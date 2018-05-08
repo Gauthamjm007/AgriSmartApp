@@ -8,7 +8,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_gravity="center">
 
         <ImageButton
@@ -17,8 +17,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
+            android:layout_marginBottom="10dp"
             android:src="@drawable/pesticides"
-            android:paddingHorizontal="25dp"
+            android:paddingVertical="25dp"
             />
         <ImageButton
             android:id="@+id/plantfertilizerbutton"
@@ -26,8 +27,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
+            android:layout_marginBottom="10dp"
             android:src="@drawable/plantfertilizer"
-            android:paddingHorizontal="25dp"
+            android:paddingVertical="25dp"
             />
         <ImageButton
             android:id="@+id/cropsuggestionbutton"
@@ -36,7 +38,7 @@
             android:layout_weight="1"
             android:background="@null"
             android:src="@drawable/cropsuggestion"
-            android:paddingHorizontal="25dp"
+            android:paddingVertical="25dp"
             />
     </LinearLayout>
 

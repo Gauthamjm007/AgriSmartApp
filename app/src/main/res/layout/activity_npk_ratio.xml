@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:weightSum="1"
+    android:orientation="vertical"
+    tools:context=".NpkRatio">
+
+
+
+    <Button
+        android:id="@+id/nitrogen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:onClick="buttonclicked1"
+        android:text="Nitrogen" />
+
+    <Button
+        android:id="@+id/phosphorus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Phosphorus"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:onClick="buttonclicked2"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/potassium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:text="Potassium"
+        android:textSize="25sp"
+        android:onClick="buttonclicked3"
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

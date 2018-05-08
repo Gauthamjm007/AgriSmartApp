@@ -8,36 +8,38 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center">
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
 
         <ImageButton
             android:id="@+id/soilhumiditybutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="@null"
-            android:src="@drawable/soilhumidity"
-            android:paddingHorizontal="25dp"
-            />
+            android:paddingVertical="25dp"
+            android:src="@drawable/waterlevel" />
+
         <ImageButton
             android:id="@+id/phbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
             android:layout_weight="1"
             android:background="@null"
-            android:src="@drawable/ph"
-            android:paddingHorizontal="25dp"
-            />
+            android:paddingVertical="25dp"
+            android:src="@drawable/ph" />
+
         <ImageButton
             android:id="@+id/npkbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@null"
-            android:src="@drawable/npk"
-            android:paddingHorizontal="25dp"
-            />
+            android:paddingVertical="25dp"
+            android:src="@drawable/npk" />
     </LinearLayout>
 
 </FrameLayout>

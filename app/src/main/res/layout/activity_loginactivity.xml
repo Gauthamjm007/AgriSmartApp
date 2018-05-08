@@ -69,7 +69,7 @@
         android:layout_marginTop="21dp"
         android:text="Don't have an Account ? Create one "
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-        android:textColor="@android:color/white"
+        android:textColor="@color/tw__composer_blue"
         android:textSize="20sp"
         android:textStyle="bold" />
 

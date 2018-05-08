@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".N_Page"
+    android:layout_centerVertical="true"
+    android:weightSum="2"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Nitrogen value"
+        tools:layout_editor_absoluteX="151dp"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:textColor="#000000" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputnumber"
+        android:inputType="number"
+        android:layout_gravity="center"
+        android:textSize="25sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:hint="Enter a number"
+        android:maxLength="8"/>
+
+
+    <Button
+        android:id="@+id/okbutton"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:background = "@drawable/roundedbutton"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="12dp"/>
+
+    <ListView
+        android:id="@+id/nlistView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background = "@drawable/layer_list"
+        android:dividerHeight="10.0sp"
+        android:layout_marginTop="10dp">
+
+    </ListView>
+
+
+</LinearLayout>

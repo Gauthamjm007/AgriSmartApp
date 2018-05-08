@@ -10,13 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.example.arunn.silfraagri.NPK_PieChart;
+import soil_package.NPK_PieChart;
 import com.example.arunn.silfraagri.R;
-import com.example.arunn.silfraagri.soil_water_level;
+import soil_package.soil_water_level;
 
-import SuggestionActivity.Suggestions;
-import soil_package.SoilHumidityFragment;
-import soil_package.npkFragment;
 import soil_package.phFragment;
 
 

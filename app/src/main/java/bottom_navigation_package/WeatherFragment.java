@@ -1,6 +1,8 @@
 package bottom_navigation_package;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.example.arunn.silfraagri.R;
+import com.example.arunn.silfraagri.pesticidesnew_activity;
+import com.example.arunn.silfraagri.weathercondition_activity;
+
 import weather_package.WeatherConditionsFragment;
 
 import weather_package.IlluminationFragment;
@@ -42,10 +47,9 @@ public class WeatherFragment extends Fragment {
         WeatherCondition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                WeatherConditionsFragment weatherconditionfragment = new WeatherConditionsFragment();
-                android.support.v4.app.FragmentTransaction weatherconditionfragmentTransaction = getFragmentManager().beginTransaction();
-                weatherconditionfragmentTransaction.replace(R.id.frag, weatherconditionfragment, "Weather Condition Fragment");
-                weatherconditionfragmentTransaction.commit();
+                Intent i = new Intent(getActivity(), weathercondition_activity.class);
+                startActivity(i);
+                ((Activity)getActivity()).overridePendingTransition(0,0);
 
             }
         });

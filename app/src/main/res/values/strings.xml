@@ -79,8 +79,9 @@
     <string name="lcapsicum">&lt;a href="https://en.wikipedia.org/wiki/Capsicum">To know more>>&lt;/a></string>
     <string name="lcabbage">&lt;a href="https://en.wikipedia.org/wiki/Cabbage">To know more>>&lt;/a></string>
     <string name="lwatermelon">&lt;a href="https://en.wikipedia.org/wiki/Watermelon">To know more>>&lt;/a></string>
-    <string name="copy_right">Copyrights © </string>
-
+    <string name="copy_right">Copyrights © %1$d</string>
+    <string name="about_page_description">AgriSmart is a product which has been developed by 4 students of JNNCE in assosiation with Silfra Technologies ,under the guidance of Silfra Mentors and Dr.Majunatha P,HOD,ECE Dept.
+    The Agrismart device consists of an Hardware unit and an Android App for Interaction with the Hardware </string>
 
 
 </resources>

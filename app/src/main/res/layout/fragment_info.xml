@@ -9,7 +9,7 @@
 <LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:layout_gravity="center">
 
     <ImageButton
@@ -19,7 +19,8 @@
         android:layout_weight="1"
         android:background="@null"
         android:src="@drawable/battery"
-        android:paddingHorizontal="25dp"
+        android:layout_marginBottom="10dp"
+        android:paddingVertical="25dp"
         />
     <ImageButton
         android:id="@+id/mapbutton"
@@ -28,7 +29,8 @@
         android:layout_weight="1"
         android:background="@null"
         android:src="@drawable/location"
-        android:paddingHorizontal="25dp"
+        android:paddingVertical="25dp"
+        android:layout_marginBottom="10dp"
         />
     <ImageButton
         android:id="@+id/devicetempbutton"
@@ -37,7 +39,7 @@
         android:layout_weight="1"
         android:background="@null"
         android:src="@drawable/temperature"
-        android:paddingHorizontal="25dp"
+        android:paddingVertical="25dp"
         />
 </LinearLayout>
 

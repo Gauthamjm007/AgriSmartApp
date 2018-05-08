@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 
 import suggestions_package.Fertilizers_suggestion_Fragment;
 import com.example.arunn.silfraagri.R;
+import com.example.arunn.silfraagri.pesticidesnew_activity;
+
 import SuggestionActivity.Suggestions;
 
 import suggestions_package.pesticides_Fragment;
@@ -45,10 +47,9 @@ public class SuggestionFragment extends Fragment {
         PesticidesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                pesticides_Fragment pesticidesfragment = new  pesticides_Fragment();
-                android.support.v4.app.FragmentTransaction pesticidesfragmentTransaction = getFragmentManager().beginTransaction();
-                pesticidesfragmentTransaction.replace(R.id.frag, pesticidesfragment, "Pesticides Fragment");
-                pesticidesfragmentTransaction.commit();
+                Intent i = new Intent(getActivity(), pesticidesnew_activity.class);
+                startActivity(i);
+                ((Activity)getActivity()).overridePendingTransition(0,0);
 
             }
         });
