@@ -77,7 +77,7 @@ public class GraphActivity extends AppCompatActivity {
     private void temperatureGraph() {
         LineChartView lineChartView = (LineChartView) findViewById(R.id.graph_temperature);
 
-        // Data
+
         LineSet dataset = new LineSet();
         for (int i = 0; i < weatherList.size(); i++) {
             float temperature = UnitConvertor.convertTemperature(Float.parseFloat(weatherList.get(i).getTemperature()), sp);
@@ -98,7 +98,7 @@ public class GraphActivity extends AppCompatActivity {
 
         lineChartView.addData(dataset);
 
-        // Grid
+
         Paint paint = new Paint();
         paint.setStyle(Paint.Style.STROKE);
         paint.setAntiAlias(true);
@@ -159,7 +159,7 @@ public class GraphActivity extends AppCompatActivity {
     private void pressureGraph() {
         LineChartView lineChartView = (LineChartView) findViewById(R.id.graph_pressure);
 
-        // Data
+
         LineSet dataset = new LineSet();
         for (int i = 0; i < weatherList.size(); i++) {
             float pressure = UnitConvertor.convertPressure(Float.parseFloat(weatherList.get(i).getPressure()), sp);
@@ -180,7 +180,7 @@ public class GraphActivity extends AppCompatActivity {
 
         lineChartView.addData(dataset);
 
-        // Grid
+
         Paint paint = new Paint();
         paint.setStyle(Paint.Style.STROKE);
         paint.setAntiAlias(true);

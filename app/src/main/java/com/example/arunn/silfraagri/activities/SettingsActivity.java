@@ -62,7 +62,7 @@ public class SettingsActivity extends PreferenceActivity
         setCustomDateEnabled();
         updateDateFormatList();
 
-        // Set summaries to current value
+
         setListPreferenceSummary("unit");
         setListPreferenceSummary("lengthUnit");
         setListPreferenceSummary("speedUnit");
@@ -122,7 +122,7 @@ public class SettingsActivity extends PreferenceActivity
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this,
                     Manifest.permission.ACCESS_FINE_LOCATION)) {
-                // Explanation not needed, since user requests this themself
+
 
             } else {
                 ActivityCompat.requestPermissions(this,
@@ -147,14 +147,14 @@ public class SettingsActivity extends PreferenceActivity
     }
 
     private void privacyGuardWorkaround() {
-        // Workaround for CM privacy guard. Register for location updates in order for it to ask us for permission
+
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         try {
             DummyLocationListener dummyLocationListener = new DummyLocationListener();
             locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, dummyLocationListener);
             locationManager.removeUpdates(dummyLocationListener);
         } catch (SecurityException e) {
-            // This will most probably not happen, as we just got granted the permission
+
         }
     }
 

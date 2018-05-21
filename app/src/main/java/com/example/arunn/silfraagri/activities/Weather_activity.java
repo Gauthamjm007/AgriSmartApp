@@ -67,7 +67,7 @@ import java.util.Map;
 public class Weather_activity extends AppCompatActivity implements LocationListener {
     protected static final int MY_PERMISSIONS_ACCESS_FINE_LOCATION = 1;
 
-    // Time in milliseconds; only reload weather if last update is longer ago than this value
+
     private static final int NO_UPDATE_REQUIRED_THRESHOLD = 300000;
 
     private static Map<String, Integer> speedUnits = new HashMap<>(3);
@@ -105,7 +105,7 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Initialize the associated SharedPreferences file with default values
+
         PreferenceManager.setDefaultValues(this, R.xml.prefs, false);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -115,7 +115,7 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
         boolean blackTheme = theme == R.style.AppTheme_NoActionBar_Black ||
                 theme == R.style.AppTheme_NoActionBar_Classic_Black;
 
-        // Initiate activity
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scrolling);
         appView = findViewById(R.id.viewApp);
@@ -131,7 +131,7 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
             toolbar.setPopupTheme(R.style.AppTheme_PopupOverlay_Black);
         }
 
-        // Initialize textboxes
+
         todayTemperature = (TextView) findViewById(R.id.todayTemperature);
         todayDescription = (TextView) findViewById(R.id.todayDescription);
         todayWind = (TextView) findViewById(R.id.todayWind);
@@ -144,7 +144,7 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
         weatherFont = Typeface.createFromAsset(this.getAssets(), "fonts/weather.ttf");
         todayIcon.setTypeface(weatherFont);
 
-        // Initialize viewPager
+
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabs);
 
@@ -152,7 +152,7 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
 
         initMappings();
 
-        // Preload data from cache
+
         preloadWeather();
         updateLastUpdateTime();
 
@@ -262,7 +262,7 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
         editor.commit();
 
         if (!recentCity.equals(result)) {
-            // New location, update weather
+
             getTodayWeather();
             getLongTermWeather();
         }
@@ -272,11 +272,8 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
         alert.setTitle("Forecastie");
         final WebView webView = new WebView(this);
-        String about = "<p>1.6.1</p>" +
-                "<p>A lightweight, opensource weather app.</p>" +
-                "<p>Developed by <a href='mailto:t.martykan@gmail.com'>Tomas Martykan</a></p>" +
-                "<p>Data provided by <a href='https://openweathermap.org/'>OpenWeatherMap</a>, under the <a href='http://creativecommons.org/licenses/by-sa/2.0/'>Creative Commons license</a>" +
-                "<p>Icons are <a href='https://erikflowers.github.io/weather-icons/'>Weather Icons</a>, by <a href='http://www.twitter.com/artill'>Lukas Bischoff</a> and <a href='http://www.twitter.com/Erik_UX'>Erik Flowers</a>, under the <a href='http://scripts.sil.org/OFL'>SIL OFL 1.1</a> licence.";
+        String about = "<p>1.6.1</p>" ;
+
         TypedArray ta = obtainStyledAttributes(new int[]{android.R.attr.textColorPrimary, R.attr.colorAccent});
         String textColor = String.format("#%06X", (0xFFFFFF & ta.getColor(0, Color.BLACK)));
         String accentColor = String.format("#%06X", (0xFFFFFF & ta.getColor(1, Color.BLUE)));
@@ -439,11 +436,11 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
             temperature = Math.round(temperature);
         }
 
-        // Rain
+
         double rain = Double.parseDouble(todayWeather.getRain());
         String rainString = UnitConvertor.getRainString(rain, sp);
 
-        // Wind
+
         double wind;
         try {
             wind = Double.parseDouble(todayWeather.getWind());
@@ -641,14 +638,7 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
             getCityByLocation();
             return true;
         }
-    /*    if (id == R.id.action_settings) {
-            Intent intent = new Intent(Weather_activity.this, SettingsActivity.class);
-            startActivity(intent);
-        }
-        if (id == R.id.action_about) {
-            aboutDialog();
-            return true;
-        }*/
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -941,7 +931,7 @@ public class Weather_activity extends AppCompatActivity implements LocationListe
         String timeFormat = android.text.format.DateFormat.getTimeFormat(context).format(lastCheckedDate);
         if (now.get(Calendar.YEAR) == lastCheckedCal.get(Calendar.YEAR) &&
                 now.get(Calendar.DAY_OF_YEAR) == lastCheckedCal.get(Calendar.DAY_OF_YEAR)) {
-            // Same day, only show time
+
             return timeFormat;
         } else {
             return android.text.format.DateFormat.getDateFormat(context).format(lastCheckedDate) + " " + timeFormat;

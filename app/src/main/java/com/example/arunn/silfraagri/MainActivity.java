@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         NavProfileImage=(CircleImageView)navView.findViewById(R.id.nav_profile_image);
         NavProfileUserName=(TextView)navView.findViewById(R.id.nav_user_full_name);
 
-        setTitle("Notification Fragment"); //this will set title of Action Bar
+        setTitle("Notification Fragment");
         NotificationFragment notificationfragment = new NotificationFragment();
         android.support.v4.app.FragmentTransaction notificationfragmentTransaction = getSupportFragmentManager().beginTransaction();
         notificationfragmentTransaction.replace(R.id.frag, notificationfragment, "Notification Fragment");
@@ -250,35 +250,35 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         int id = item.getItemId();
         switch (id){
             case R.id.notifications_id:
-                setTitle("Notification Fragment"); //this will set title of Action Bar
+                setTitle("Notification Fragment");
                 NotificationFragment notificationfragment = new NotificationFragment();
                 android.support.v4.app.FragmentTransaction notificationfragmentTransaction = getSupportFragmentManager().beginTransaction();
                 notificationfragmentTransaction.replace(R.id.frag, notificationfragment, "Notification Fragment");
                 notificationfragmentTransaction.commit();
                 return true;
             case R.id.info_id:
-                setTitle("Info Fragment"); //this will set title of Action Bar
+                setTitle("Info Fragment");
                 InfoFragment infofragment = new InfoFragment();
                 android.support.v4.app.FragmentTransaction infofragmentTransaction = getSupportFragmentManager().beginTransaction();
                 infofragmentTransaction.replace(R.id.frag, infofragment, "Info Fragment");
                 infofragmentTransaction.commit();
                 return true;
             case R.id.weather_id:
-                setTitle("weather Fragment"); //this will set title of Action Bar
+                setTitle("weather Fragment");
                 WeatherFragment weatherfragment = new WeatherFragment();
                 android.support.v4.app.FragmentTransaction weatherfragmentTransaction = getSupportFragmentManager().beginTransaction();
                 weatherfragmentTransaction.replace(R.id.frag, weatherfragment, "Weather Fragment");
                 weatherfragmentTransaction.commit();
                 return true;
             case R.id.soil_info_id:
-                setTitle("Soil Info Fragment"); //this will set title of Action Bar
+                setTitle("Soil Info Fragment");
                 SoilFragment soilfragment = new SoilFragment();
                 android.support.v4.app.FragmentTransaction soilfragmentTransaction = getSupportFragmentManager().beginTransaction();
                 soilfragmentTransaction.replace(R.id.frag, soilfragment, "Soil Fragment");
                 soilfragmentTransaction.commit();
                 return true;
             case R.id.suggestion_id:
-                setTitle("SuggestionFragment"); //this will set title of Action Bar
+                setTitle("SuggestionFragment");
                 SuggestionFragment suggestionfragment = new SuggestionFragment();
                 android.support.v4.app.FragmentTransaction suggestionfragmentTransaction = getSupportFragmentManager().beginTransaction();
                 suggestionfragmentTransaction.replace(R.id.frag, suggestionfragment, "Suggestion Fragment");

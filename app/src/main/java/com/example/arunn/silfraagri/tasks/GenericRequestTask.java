@@ -83,35 +83,35 @@ public abstract class GenericRequestTask extends AsyncTask<String, String, TaskO
                     }
                     close(r);
                     urlConnection.disconnect();
-                    // Background work finished successfully
+
                     Log.i("Task", "done successfully");
                     output.taskResult = TaskResult.SUCCESS;
-                    // Save date/time for latest successful result
+
                     activity.saveLastUpdateTime(PreferenceManager.getDefaultSharedPreferences(context));
                 }
                 else if (urlConnection.getResponseCode() == 429) {
-                    // Too many requests
+
                     Log.i("Task", "too many requests");
                     output.taskResult = TaskResult.TOO_MANY_REQUESTS;
                 }
                 else {
-                    // Bad response from server
+
                     Log.i("Task", "bad response " + urlConnection.getResponseCode());
                     output.taskResult = TaskResult.BAD_RESPONSE;
                 }
             } catch (IOException e) {
                 Log.e("IOException Data", response);
                 e.printStackTrace();
-                // Exception while reading data from url connection
+
                 output.taskResult = TaskResult.IO_EXCEPTION;
             }
         }
 
         if (TaskResult.SUCCESS.equals(output.taskResult)) {
-            // Parse JSON data
+
             ParseResult parseResult = parseResponse(response);
             if (ParseResult.CITY_NOT_FOUND.equals(parseResult)) {
-                // Retain previously specified city if current one was not recognized
+
                 restorePreviousCity();
             }
             output.parseResult = parseResult;

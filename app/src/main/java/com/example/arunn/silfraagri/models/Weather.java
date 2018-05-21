@@ -13,7 +13,7 @@ import java.util.Locale;
 public class Weather {
 
     public enum WindDirection {
-        // don't change order
+
         NORTH, NORTH_NORTH_EAST, NORTH_EAST, EAST_NORTH_EAST,
         EAST, EAST_SOUTH_EAST, SOUTH_EAST, SOUTH_SOUTH_EAST,
         SOUTH, SOUTH_SOUTH_WEST, SOUTH_WEST, WEST_SOUTH_WEST,
@@ -221,7 +221,7 @@ public class Weather {
                 setDate(inputFormat.parse(dateString));
             }
             catch (ParseException e2) {
-                setDate(new Date()); // make the error somewhat obvious
+                setDate(new Date());
                 e2.printStackTrace();
             }
         }
