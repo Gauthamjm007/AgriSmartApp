@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login"
-    tools:context="com.example.arunn.silfraagri.loginactivity">
+    tools:context="com.example.arunn.silfraagri.loginandregister_activity.loginactivity">
 
 
     <ImageView

@@ -1,15 +1,11 @@
 package com.example.arunn.silfraagri;
 
 import android.app.AlertDialog;
-import android.app.NotificationManager;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.NotificationCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -27,19 +23,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.nex3z.notificationbadge.NotificationBadge;
 import com.squareup.picasso.Picasso;
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
 import bottom_navigation_package.InfoFragment;
 import bottom_navigation_package.NotificationFragment;
@@ -47,7 +31,9 @@ import bottom_navigation_package.SoilFragment;
 import bottom_navigation_package.SuggestionFragment;
 import bottom_navigation_package.WeatherFragment;
 import de.hdodenhof.circleimageview.CircleImageView;
-import info_bar_package.MapsActivity;
+import loginandregister_activity.SetupActivity;
+import loginandregister_activity.aboutus_activity;
+import loginandregister_activity.loginactivity;
 
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -66,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     TextView textview;
     FirebaseDatabase firebaseDatabase;
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "Weather_activity";
 
 
 
@@ -116,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
 
 
+
         UserRef.child(currentUserId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -139,6 +126,28 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             }
 
             @Override
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             public void onCancelled(DatabaseError databaseError) {
 
             }
@@ -216,16 +225,14 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     private void UserMenuSelector(MenuItem item) {
         switch (item.getItemId()){
-            case R.id.nav_profile:
-                Toast.makeText(this,"Profile",Toast.LENGTH_SHORT).show();
-                break;
+
             case R.id.nav_about_us:
                 Intent aboutusIntent = new Intent(MainActivity.this, aboutus_activity.class);
                 startActivity(aboutusIntent);
                 break;
 
             case R.id.nav_contact:
-                Toast.makeText(this,"Contact",Toast.LENGTH_SHORT).show();
+                Toast.makeText(this,"Contact us at : +918951713240",Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_logout:

@@ -10,13 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
-import com.example.arunn.silfraagri.K_Page;
-import com.example.arunn.silfraagri.N_page;
-import com.example.arunn.silfraagri.P_Page;
+import fertilizer_darshan.K_Page;
+import fertilizer_darshan.N_page;
+import fertilizer_darshan.P_Page;
 import com.example.arunn.silfraagri.R;
-import com.example.arunn.silfraagri.pesticidesnew_activity;
-
-import SuggestionActivity.Suggestions;
 
 
 /**

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/register"
 
-    tools:context="com.example.arunn.silfraagri.RegisterActivity">
+    tools:context="com.example.arunn.silfraagri.loginandregister_activity.RegisterActivity">
 
     <ImageView
         android:id="@+id/register_icon"

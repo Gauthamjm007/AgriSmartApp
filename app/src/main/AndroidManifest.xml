@@ -17,11 +17,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".loginactivity" />
-        <activity android:name=".SetupActivity" />
+        <activity android:name="loginandregister_activity.RegisterActivity" />
+        <activity android:name="loginandregister_activity.loginactivity" />
+        <activity android:name="loginandregister_activity.SetupActivity" />
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="loginandregister_activity.SplashScreenActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,6 +37,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDdmAO_Zh3sycunjAh9_Ha0c-z2VsPoiLQ" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
 
         <activity
             android:name="info_bar_package.MapsActivity"
@@ -58,7 +62,7 @@
             android:label="Soil Moisture"
             android:theme="@style/AppThemeMap" />
         <activity
-            android:name=".aboutus_activity"
+            android:name="loginandregister_activity.aboutus_activity"
             android:theme="@style/AppThemeMap" />
         <activity
             android:name="darshanNotification.NotificationActivity"
@@ -91,16 +95,107 @@
             android:theme="@style/AppThemeMap" />
         <activity android:name=".pesticidesnew_activity" />
         <activity android:name=".weathercondition_activity"></activity>
-        <activity android:name=".NpkRatio" />
-        <activity android:name=".P_Page"
+        <activity android:name="fertilizer_darshan.NpkRatio" />
+        <activity android:name="fertilizer_darshan.P_Page"
             android:label="Phosphorous"
             android:theme="@style/AppThemeMap"/>
-        <activity android:name=".K_Page"
+        <activity android:name="fertilizer_darshan.K_Page"
             android:label="Potassium"
             android:theme="@style/AppThemeMap"/>
-        <activity android:name=".N_page"
+        <activity android:name="fertilizer_darshan.N_page"
             android:label="Nitrogen"
             android:theme="@style/AppThemeMap"></activity>
+        <activity android:name="pesticides_map.MainMenuScreen" />
+        <activity
+            android:name="pesticides_map.SaveSpotCategoryActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="pesticides_map.SaveTitleActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="pesticides_map.SpotCollectionActivity" />
+        <activity android:name="pesticides_map.CategoryCollectionActivity" />
+        <activity android:name="pesticides_map.EditSpotsActivity"></activity>
+        <activity
+            android:name="pesticides_map.MapsStart"
+            android:label="Save Me a Spot" >
+        </activity>
+
+        <activity
+            android:name=".activities.Weather_activity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name="activities.SettingsActivity"
+            android:theme="@style/AppTheme" />
+
+        <receiver android:name="widgets.ExtensiveWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/extensive_widget" />
+        </receiver>
+        <receiver android:name="widgets.TimeWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/time_widget" />
+        </receiver>
+        <receiver android:name="widgets.SimpleWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/simple_widget" />
+        </receiver>
+
+        <service
+            android:name="widgets.DashClockWeatherExtension"
+            android:icon="@drawable/ic_cloud_white_24dp"
+            android:label="@string/app_name"
+            android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+
+            <meta-data
+                android:name="protocolVersion"
+                android:value="2" />
+            <meta-data
+                android:name="worldReadable"
+                android:value="true" />
+            <meta-data
+                android:name="settingsActivity"
+                android:value=".ExampleSettingsActivity" />
+        </service>
+
+        <receiver android:name="AlarmReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="activities.MapActivity"
+            android:parentActivityName=".activities.Weather_activity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+
+        <activity
+            android:name="activities.GraphActivity"
+            android:label="@string/action_graphs"
+            android:parentActivityName=".activities.Weather_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@
     android:layout_centerVertical="true"
     android:weightSum="1"
     android:orientation="vertical"
-    tools:context=".NpkRatio">
+    tools:context="fertilizer_darshan.NpkRatio">
 
 
 

@@ -30,14 +30,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class MapFragment extends Fragment {
 
 
     public MapFragment() {
-        // Required empty public constructor
+
     }
 
 

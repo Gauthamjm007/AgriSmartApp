@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent_layout_category_collection"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!--CardView för att visa kategorilista-->
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardview_category_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp"
+        app:cardPreventCornerOverlap="false"
+        android:clickable="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout_category_collection"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/category_image_cardview"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/heart" />
+
+            <TextView
+                android:id="@+id/category_name_cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/category_image_cardview"
+                android:text="Category Name"
+                android:textColor="@color/colorAccent"
+                android:textSize="24dp" />
+
+            <ImageView
+                android:id="@+id/delete_category_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+            <ImageView
+                android:id="@+id/edit_category_icon"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/delete_category_icon"
+                android:layout_toLeftOf="@+id/delete_category_icon"
+                android:layout_toStartOf="@+id/delete_category_icon"
+                app:srcCompat="@android:drawable/ic_menu_edit" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

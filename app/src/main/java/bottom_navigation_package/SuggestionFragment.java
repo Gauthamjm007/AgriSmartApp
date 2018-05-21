@@ -11,17 +11,13 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import suggestions_package.Fertilizers_suggestion_Fragment;
+
+import pesticides_map.MapsStart;
 import com.example.arunn.silfraagri.R;
-import com.example.arunn.silfraagri.pesticidesnew_activity;
 
 import SuggestionActivity.Suggestions;
 
-import suggestions_package.pesticides_Fragment;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class SuggestionFragment extends Fragment {
 
 
@@ -47,7 +43,7 @@ public class SuggestionFragment extends Fragment {
         PesticidesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), pesticidesnew_activity.class);
+                Intent i = new Intent(getActivity(), MapsStart.class);
                 startActivity(i);
                 ((Activity)getActivity()).overridePendingTransition(0,0);
 

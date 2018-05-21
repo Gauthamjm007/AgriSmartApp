@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/menuBackgroundColor"
+    android:padding="16dp"
+    tools:context="pesticides_map.SaveTitleActivity">
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/titleSaveTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="16dp"
+        android:defaultFocusHighlightEnabled="false"
+        android:focusedByDefault="false"
+        android:text="@string/name_spot"
+        android:textSize="24dp" />
+
+    <EditText
+        android:id="@+id/editTitle"
+        style="@style/Widget.AppCompat.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_below="@id/titleSaveTitle"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/selectTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTitle"
+        android:layout_marginBottom="16dp"
+        android:text="Or select title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/title_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@id/selectTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addDescriptionTextView"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="@string/add_description_tv"
+        android:layout_below="@+id/title_recycler_view"/>
+
+    <EditText
+        android:id="@+id/addDescription"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/addDescriptionTextView"
+        android:inputType="textMultiLine" />
+
+    <ImageButton
+        android:id="@+id/save_title_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/addDescription"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundbutton_save"
+        android:src="@android:drawable/ic_menu_save" />
+</RelativeLayout>
+
+</ScrollView>

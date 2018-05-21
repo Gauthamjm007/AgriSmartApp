@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".N_Page"
+    tools:context="fertilizer_darshan.N_page"
     android:layout_centerVertical="true"
     android:weightSum="2"
     android:orientation="vertical">

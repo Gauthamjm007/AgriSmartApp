@@ -1,0 +1,72 @@
+<!--FrameLayout definierar lager, varje lager är sitt eget xml-element!-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="pesticides_map.MapsStart" >
+
+<fragment
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sup.savemeaspot.MapsStart"/>
+
+<!--Menu items-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@id/map">
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="80dp"
+            android:layout_toLeftOf="@+id/map_Savebtn"
+            android:layout_toStartOf="@+id/map_Savebtn"
+            android:background="@drawable/roundbutton_save"
+            android:onClick="openMainMenu"
+            android:padding="1dp"
+            android:text="@string/button_menu_en"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/colorAccent"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/map_Savebtn"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.809"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="80dp" />
+
+        <Button
+            android:id="@+id/map_Savebtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignBottom="@+id/menuButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="140dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/roundbutton_save"
+            android:onClick="saveSpotDialogueView"
+            android:padding="1dp"
+            android:text="@string/button_save_en"
+            android:textColor="@color/colorAccent"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>

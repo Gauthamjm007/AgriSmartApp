@@ -18,9 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class DeviceTempFragment extends Fragment {
     FirebaseDatabase firebaseDatabase;
     public DatabaseReference mRef;
@@ -30,7 +28,7 @@ public class DeviceTempFragment extends Fragment {
     int y;
 
     public DeviceTempFragment() {
-        // Required empty public constructor
+
     }
 
 

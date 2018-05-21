@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.arunn.silfraagri.R;
+
 public class pesticidesnew_activity extends AppCompatActivity {
 
     @Override

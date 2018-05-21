@@ -18,9 +18,7 @@ import info_bar_package.MapsActivity;
 import com.example.arunn.silfraagri.R;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class InfoFragment extends Fragment {
 
     String d,e;

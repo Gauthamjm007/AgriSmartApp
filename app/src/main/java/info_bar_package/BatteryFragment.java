@@ -18,9 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class BatteryFragment extends Fragment {
 
     FirebaseDatabase firebaseDatabase;
@@ -32,7 +30,7 @@ public class BatteryFragment extends Fragment {
 
 
     public BatteryFragment() {
-        // Required empty public constructor
+
     }
 
 
@@ -93,7 +91,7 @@ public class BatteryFragment extends Fragment {
 
             }
         });
-        // Inflate the layout for this fragment
+
    return view;
     }
 

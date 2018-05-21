@@ -3,16 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.arunn.silfraagri.darshanNotification.notification">
+    tools:context="bottom_navigation_package.NotificationFragment">
+
+
+    <com.nex3z.notificationbadge.NotificationBadge
+        android:id="@+id/badge"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:badgeTextSize="20dp"
+        android:layout_gravity="center_horizontal"></com.nex3z.notificationbadge.NotificationBadge>
 
 
     <ImageButton
         android:id="@+id/imagenotification"
         android:layout_width="225dp"
         android:layout_height="185dp"
-        android:src="@drawable/iconsnotification"
         android:layout_gravity="center"
-        android:background="@color/white"/>
+        android:background="@color/white"
+        android:src="@drawable/iconsnotification" />
 
 </FrameLayout>
 

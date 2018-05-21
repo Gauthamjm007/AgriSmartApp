@@ -11,18 +11,15 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 
 import com.example.arunn.silfraagri.R;
-import com.example.arunn.silfraagri.pesticidesnew_activity;
+import com.example.arunn.silfraagri.activities.Weather_activity;
 import com.example.arunn.silfraagri.weathercondition_activity;
 
-import weather_package.WeatherConditionsFragment;
 
 import weather_package.IlluminationFragment;
 import weather_package.RainProbabilityFragment;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class WeatherFragment extends Fragment {
 
 
@@ -31,7 +28,7 @@ public class WeatherFragment extends Fragment {
     private ImageButton Illumination;
 
     public WeatherFragment() {
-        // Required empty public constructor
+
     }
 
 
@@ -47,7 +44,7 @@ public class WeatherFragment extends Fragment {
         WeatherCondition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getActivity(), weathercondition_activity.class);
+                Intent i = new Intent(getActivity(),Weather_activity.class);
                 startActivity(i);
                 ((Activity)getActivity()).overridePendingTransition(0,0);
 

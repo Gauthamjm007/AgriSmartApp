@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/menuBackgroundColor"
+    android:theme="@style/AppTheme"
+    tools:context="pesticides_map.MainMenuScreen">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/menuButtonConstraint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        >
+
+        <ImageButton
+            android:id="@+id/edit_spots_button"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/menuButtonColor"
+            android:drawableLeft="@drawable/map_marker_icon"
+            android:textColor="@color/menuButtonTextColor"
+            android:layout_margin="20dp"
+            android:src="@drawable/edit_spots_menu_icon"
+            app:layout_constraintLeft_toRightOf="@id/my_spots_button"
+            />
+
+        <ImageButton
+            android:id="@+id/my_spots_button"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@color/menuButtonColor"
+            android:layout_margin="20dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/map_marker_icon" />
+
+        <ImageButton
+            android:id="@+id/categories_button"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@color/menuButtonColor"
+            android:layout_margin="20dp"
+            android:src="@drawable/menu_icon"
+            app:layout_constraintTop_toBottomOf="@+id/my_spots_button"
+            />
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:background="@color/menuButtonColor"
+            android:text="Settings"
+            android:textColor="@color/menuButtonTextColor"
+            android:layout_margin="20dp"
+            android:src="@drawable/settings_icon"
+            app:layout_constraintLeft_toRightOf="@id/categories_button"
+            app:layout_constraintTop_toBottomOf="@id/edit_spots_button"
+            />
+
+    </android.support.constraint.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/close_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/round_button_big"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/close_icon"
+        />
+
+</RelativeLayout>

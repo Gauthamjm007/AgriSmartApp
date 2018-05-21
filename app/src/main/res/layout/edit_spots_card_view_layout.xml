@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="wrap_content">
+
+<android.support.v7.widget.CardView
+    android:id="@+id/cardview_edit_spots"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp"
+    app:cardPreventCornerOverlap="false"
+    android:focusable="true"
+    android:clickable="true"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/edit_spots_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/menuButtonTextColor"
+        >
+
+        <RelativeLayout
+            android:id="@+id/edit_spots_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/menuButtonColor"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/edit_spot_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:text="sample"
+                android:textColor="@color/menuButtonTextColor"
+                android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/delete_spot_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+            <ImageView
+                android:id="@+id/edit_spot_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_toLeftOf="@+id/delete_spot_button"
+                android:layout_toStartOf="@+id/delete_spot_button"
+                app:srcCompat="@android:drawable/ic_menu_edit" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/edit_spot_drop_down_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_spots_relative_layout"
+            android:background="@color/spotDetailsBackground"
+            android:padding="10dp"
+            app:layout_constraintTop_toBottomOf="@id/edit_spots_relative_layout"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/edit_spot_description_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stuff"
+                android:background="@color/spotDetailsBackground"
+                />
+
+        </RelativeLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
+
+</LinearLayout>

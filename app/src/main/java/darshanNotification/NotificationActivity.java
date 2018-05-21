@@ -33,7 +33,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class NotificationActivity extends AppCompatActivity implements View.OnClickListener {
+public class NotificationActivity extends AppCompatActivity  {
 
     public TextView date,ph,time,notif;
 
@@ -62,7 +62,7 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
         mRef = firebaseDatabase.getReference();
         mbadge=(NotificationBadge) findViewById(R.id.badge);
         notif =(Button) findViewById(R.id.notif);
-        notif.setOnClickListener(this);
+        //notif.setOnClickListener(this);
 
 
         notification=new NotificationCompat.Builder(this);
@@ -102,7 +102,7 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
                 StatuS = dataSnapshot.child("sensors").child("battery").getValue().toString();
                 Stat = Integer.parseInt(StatuS);
                 switch (Stat){
-                    case 5:
+                    case 0:
 
                         notification.setSmallIcon(R.drawable.ic_launcher);
                         notification.setTicker("AgriSmart");
@@ -393,15 +393,20 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
             }
         });
 
+        Intent intent = new Intent(NotificationActivity.this,notification. class);
+       // mbadge.setNumber(0);
+        startActivity(intent);
+
+
     }
 
 
-    @Override
+  /*  @Override
     public void onClick(View view) {
         Intent intent = new Intent(NotificationActivity.this,notification. class);
         mbadge.setNumber(0);
         startActivity(intent);
 
-        }
+        }*/
 
     }

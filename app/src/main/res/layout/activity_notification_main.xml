@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@drawable/notif"
-    tools:context="com.example.arunn.silfraagri.darshanNotification.NotificationActivity">
+    tools:context="darshanNotification.NotificationActivity">
 
 
 

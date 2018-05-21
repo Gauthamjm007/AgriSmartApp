@@ -12,17 +12,16 @@ import android.widget.ImageButton;
 
 import darshanNotification.NotificationActivity;
 import com.example.arunn.silfraagri.R;
+import com.nex3z.notificationbadge.NotificationBadge;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class NotificationFragment extends Fragment  {
 
     public ImageButton notificatonicon;
+    NotificationBadge mbadge;
 
     public NotificationFragment() {
-        // Required empty public constructor
+
     }
 
 
@@ -32,6 +31,8 @@ public class NotificationFragment extends Fragment  {
 
         View view = inflater.inflate(R.layout.fragment_notification, container, false);
         notificatonicon=(ImageButton)view.findViewById(R.id.imagenotification);
+        mbadge=(NotificationBadge) view.findViewById(R.id.badge);
+        mbadge.setNumber(5);
 
         notificatonicon.setOnClickListener(new View.OnClickListener() {
             @Override
