@@ -1,5 +1,5 @@
 # AgriSmartApp
-An Android App and Hardware for SilfraTechnologies
+An Android App and IoT device built during Internship in SilfraTechnologies
 
 ![IMG-20180420-WA0004](https://user-images.githubusercontent.com/26291295/69261284-2a2f2280-0b76-11ea-80c4-ec3dab672562.jpg)
 ![Screenshot_2018-04-20-10-48-35-523_com example arunn silfraagri](https://user-images.githubusercontent.com/26291295/69261285-2a2f2280-0b76-11ea-9df9-83da0a451cde.png)
